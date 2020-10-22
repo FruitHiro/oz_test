@@ -19,9 +19,7 @@ export default new Vuex.Store({
   actions: {
     calculate({ state, commit }) {
       if (state.expression && state.expression !== '0') {
-        const lastChar = state.expression.slice(-1)
-        const expression = (+lastChar) ? state.expression : state.expression.slice(0, -1)
-        commit('changeResult', new Function(`return (${expression})`)())
+        commit('changeResult', new Function(`return (${state.expression})`)())
       }
     },
     getResult({ state, commit }) {
