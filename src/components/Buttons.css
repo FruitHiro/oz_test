@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  background-color: #979797;
+  font-weight: 200;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+}
+
+.button,
+.red,
+.wide {
+  background-color: #D8D8D8;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  line-height: 44px;
+  padding: 0;
+}
+
+.red {
+  background-color: #B15E5E;
+  color: #ffffff;
+}
+
+.wide {
+  grid-column: 1 / 4;
+}
+
+button[disabled] {
+  opacity: 0.75;
+}
